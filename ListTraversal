@@ -1,0 +1,31 @@
+.data 
+List: 1 7 5 4 3 2 10 
+Len:7
+
+.text
+#load List start address in t0 and length of array in t1
+la $t0, List
+la $t1, Len
+lw $t1, ($t1)
+
+#Set counter to start of array address
+add $t2, $zero, $t0
+
+#Set t3 to end of array
+add $t3, $zero, $t1
+sll $t3, $t3, 2
+add $t3, $t3, $t0
+
+addi $v0, $zero, 1
+
+Loop:
+lw $t4, ($t2)
+add $a0, $t4, $zero
+syscall
+addi $t2, $t2, 4
+bne $t3, $t2, Loop
+
+
+
+
+
