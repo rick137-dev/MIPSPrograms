@@ -28,4 +28,4 @@ Some of the included programs:
 4. Assemble and run the program
 
 ## License
-This project is licensed under the MIT License – feel free to use, modify, and share these programs.
+This project is licensed under the MIT License. Feel free to use, modify, and share these programs.
